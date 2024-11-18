@@ -10,7 +10,7 @@ driver.maximize_window()
 driver.implicitly_wait(10)
 
 
-''
+
 driver.get("https://skelbiu.lt")
 butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
 butinu_mygtukai.click()
@@ -35,19 +35,83 @@ while True:
             next_page_found = True
             break
     if not next_page_found:
-        print("No more pages. Exiting loop.")
+        print("Nera daugiau puslapiu")
         break
 
 print(count)
-if count == driver.find_element(By.XPATH, "//*[@id='body-container']/div[2]/div[1]/ul/li/span"):
+text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
+number = int(text[1:-1])
+if count == number:
     print("All fine")
 else:
-    print("Ah Shit, Here We Go Again")
-print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span")}')
+    print("Ah S***, Here We Go Again")
+print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
 time.sleep(3000)
-''
 
 
+'''
+driver.get("https://skelbiu.lt")
+butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
+butinu_mygtukai.click()
+
+keyword = driver.find_element(By.ID,"searchKeyword")
+keyword.send_keys("žibalas")
+driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
+time.sleep(3)
+
+count = 0
+while True:
+    items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
+    for item in items:
+        print(item.get_attribute("href"))
+        count += 1
+    time.sleep(1)
+    pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
+    next_page_found = False
+    for page in pages:
+        if page.text == "»":
+            page.click()
+            next_page_found = True
+            break
+    if not next_page_found:
+        print("Nera daugiau puslapiu")
+        break
+
+print(count)
+'''
+
+'''
+driver.get("https://skelbiu.lt")
+butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
+butinu_mygtukai.click()
+
+keyword = driver.find_element(By.ID,"searchKeyword")
+keyword.send_keys("asdfgsdf")
+driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
+time.sleep(3)
+
+count = 0
+while True:
+    items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
+    for item in items:
+        print(item.get_attribute("href"))
+        count += 1
+    if count == 0:
+        print('Nera tokiu prekiu')
+    time.sleep(1)
+    pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
+    next_page_found = False
+    for page in pages:
+        if page.text == "»":
+            page.click()
+            next_page_found = True
+            break
+    if not next_page_found:
+        print("Nera daugiau puslapiu")
+        break
+
+print(count)
+'''
 
 # skelbiu.lt
 # pagal atitinkamus raktažodžius:

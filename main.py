@@ -3,13 +3,14 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import NoSuchElementException
 
 driver = webdriver.Chrome
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.implicitly_wait(10)
 
+
+''
 driver.get("https://skelbiu.lt")
 butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
 butinu_mygtukai.click()
@@ -19,11 +20,9 @@ keyword.send_keys("kadagys")
 driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
 time.sleep(3)
 
-# container = driver.find_element(By.ID, ("container"))
 count = 0
 while True:
     items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
-    # print(len(items))
     for item in items:
         print(item.get_attribute("href"))
         count += 1
@@ -40,11 +39,15 @@ while True:
         break
 
 print(count)
-# time.sleep(1)
-# toliau = driver.find_element(By.CLASS_NAME, "pagination_link")
-# toliau.click()
-
+if count == driver.find_element(By.XPATH, "//*[@id='body-container']/div[2]/div[1]/ul/li/span"):
+    print("All fine")
+else:
+    print("Ah Shit, Here We Go Again")
+print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span")}')
 time.sleep(3000)
+''
+
+
 
 # skelbiu.lt
 # pagal atitinkamus raktažodžius:

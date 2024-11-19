@@ -1,15 +1,15 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.devtools.v85.dom import get_attributes
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome
 driver = webdriver.Chrome()
 driver.maximize_window()
-driver.implicitly_wait(10)
+driver.implicitly_wait(0)
 
-
+'''
 
 driver.get("https://skelbiu.lt")
 butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
@@ -21,7 +21,12 @@ driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
 time.sleep(3)
 
 count = 0
+aruodas = 0
 while True:
+    # list_aurodas = driver.find_elements(By.CLASS_NAME, "aruodas")
+    # for xa in list_aurodas:
+    #     aruodas += 1
+    #     print(xa.text)
     items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
     for item in items:
         print(item.get_attribute("href"))
@@ -38,16 +43,17 @@ while True:
         print("Nera daugiau puslapiu")
         break
 
-print(count)
+# print(count)
 text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
 number = int(text[1:-1])
 if count == number:
-    print("All fine")
+    print(f"All fine {number}/{count}")
 else:
     print("Ah S***, Here We Go Again")
-print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
+# print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
 time.sleep(3000)
 
+'''
 
 '''
 driver.get("https://skelbiu.lt")
@@ -80,13 +86,13 @@ while True:
 print(count)
 '''
 
-'''
+''
 driver.get("https://skelbiu.lt")
 butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
 butinu_mygtukai.click()
 
 keyword = driver.find_element(By.ID,"searchKeyword")
-keyword.send_keys("asdfgsdf")
+keyword.send_keys("telefonas")
 driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
 time.sleep(3)
 
@@ -111,7 +117,16 @@ while True:
         break
 
 print(count)
-'''
+
+text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
+number = int(text[1:-1])
+if count == number:
+    print(f"All fine {number}/{count}")
+else:
+    print("Ah S***, Here We Go Again")
+# print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
+time.sleep(3000)
+''
 
 # skelbiu.lt
 # pagal atitinkamus raktažodžius:

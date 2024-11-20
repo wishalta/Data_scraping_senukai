@@ -9,124 +9,148 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.implicitly_wait(0)
 
-'''
+''' ----------------------------------------------1---------------------------------------------- Perfect Done'''
 
-driver.get("https://skelbiu.lt")
-butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
-butinu_mygtukai.click()
+# driver.get("https://skelbiu.lt")
+# butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
+# butinu_mygtukai.click()
+#
+# keyword = driver.find_element(By.ID,"searchKeyword")
+# keyword.send_keys("kadagys")
+# driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
+# time.sleep(3)
+#
+# count = 0
+# aruodas = 0
+# while True:
+#     list_aurodas = driver.find_elements(By.CLASS_NAME, "aruodas")
+#     for xa in list_aurodas:
+#         aruodas += 1
+#     items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
+#     for item in items:
+#         print(item.get_attribute("href"))
+#         count += 1
+#         # class_list = item.get_attribute("class").split()
+#         # if 'aruodas' in list_aurodas:
+#         #     aruodas += 1
+#         # else:
+#         #     continue
+#     time.sleep(1)
+#     pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
+#     next_page_found = False
+#     for page in pages:
+#         if page.text == "»":
+#             page.click()
+#             next_page_found = True
+#             break
+#     if not next_page_found:
+#         print("Nera daugiau puslapiu")
+#         break
+#
+# print(f'aruodas: {aruodas}')
+# # print(count)
+# text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
+# number = int(text[1:-1])
+# if count == number:
+#     print(f"Rodo ta pati skaiciu, kaip ir svetaineje: {number}/{count}")
+#     print(f'Bet i si skaiciu taip pat ieina yra aruodo {aruodas} skelbimas')
+# else:
+#     print("Ah S***, Here We Go Again")
+# time.sleep(3000)
 
-keyword = driver.find_element(By.ID,"searchKeyword")
-keyword.send_keys("kadagys")
-driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
-time.sleep(3)
+''' ----------------------------------------------2---------------------------------------------- Perfect Done'''
 
-count = 0
-aruodas = 0
-while True:
-    # list_aurodas = driver.find_elements(By.CLASS_NAME, "aruodas")
-    # for xa in list_aurodas:
-    #     aruodas += 1
-    #     print(xa.text)
-    items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
-    for item in items:
-        print(item.get_attribute("href"))
-        count += 1
-    time.sleep(1)
-    pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
-    next_page_found = False
-    for page in pages:
-        if page.text == "»":
-            page.click()
-            next_page_found = True
-            break
-    if not next_page_found:
-        print("Nera daugiau puslapiu")
-        break
-
+# driver.get("https://skelbiu.lt")
+# butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
+# butinu_mygtukai.click()
+#
+# keyword = driver.find_element(By.ID,"searchKeyword")
+# keyword.send_keys("žibalas")
+# driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
+# time.sleep(3)
+#
+# count = 0
+# autoplius = 0
+# while True:
+#     list_aurodas = driver.find_elements(By.CLASS_NAME, "autoplius")
+#     for xa in list_aurodas:
+#         autoplius += 1
+#     items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
+#     for item in items:
+#         print(item.get_attribute("href"))
+#         count += 1
+#         # class_list = item.get_attribute("class").split()
+#         # if 'aruodas' in list_aurodas:
+#         #     aruodas += 1
+#         # else:
+#         #     continue
+#     time.sleep(1)
+#     pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
+#     next_page_found = False
+#     for page in pages:
+#         if page.text == "»":
+#             page.click()
+#             next_page_found = True
+#             break
+#     if not next_page_found:
+#         print("Nera daugiau puslapiu")
+#         break
+#
 # print(count)
-text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
-number = int(text[1:-1])
-if count == number:
-    print(f"All fine {number}/{count}")
-else:
-    print("Ah S***, Here We Go Again")
-# print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
-time.sleep(3000)
+#
+# print(f'autoplius: {autoplius}')
+# # print(count)
+# text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
+# number = int(text[1:-1])
+# if count == number:
+#     print(f"Rodo ta pati skaiciu, kaip ir svetaineje: {number}/{count}")
+#     print(f'Bet i si skaiciu taip pat ieina yra autoplius {autoplius} skelbimas/-i')
+# else:
+#     print("Ah S***, Here We Go Again")
+# time.sleep(3000)
 
-'''
+''' ----------------------------------------------3---------------------------------------------- '''
 
-'''
-driver.get("https://skelbiu.lt")
-butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
-butinu_mygtukai.click()
+# driver.get("https://skelbiu.lt")
+# butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
+# butinu_mygtukai.click()
+#
+# keyword = driver.find_element(By.ID,"searchKeyword")
+# keyword.send_keys("telefonas")
+# driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
+# time.sleep(3)
+#
+# count = 0
+# while True:
+#     items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
+#     for item in items:
+#         print(item.get_attribute("href"))
+#         count += 1
+#     if count == 0:
+#         print('Nera tokiu prekiu')
+#     time.sleep(1)
+#     pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
+#     next_page_found = False
+#     for page in pages:
+#         if page.text == "»":
+#             page.click()
+#             next_page_found = True
+#             break
+#     if not next_page_found:
+#         print("Nera daugiau puslapiu")
+#         break
+#
+# print(count)
+#
+# text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
+# number = int(text[1:-1])
+# if count == number:
+#     print(f"All fine {number}/{count}")
+# else:
+#     print("Ah S***, Here We Go Again")
+# # print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
+# time.sleep(3000)
 
-keyword = driver.find_element(By.ID,"searchKeyword")
-keyword.send_keys("žibalas")
-driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
-time.sleep(3)
-
-count = 0
-while True:
-    items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
-    for item in items:
-        print(item.get_attribute("href"))
-        count += 1
-    time.sleep(1)
-    pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
-    next_page_found = False
-    for page in pages:
-        if page.text == "»":
-            page.click()
-            next_page_found = True
-            break
-    if not next_page_found:
-        print("Nera daugiau puslapiu")
-        break
-
-print(count)
-'''
-
-''
-driver.get("https://skelbiu.lt")
-butinu_mygtukai = driver.find_element(By.ID,"onetrust-reject-all-handler")
-butinu_mygtukai.click()
-
-keyword = driver.find_element(By.ID,"searchKeyword")
-keyword.send_keys("telefonas")
-driver.find_element(By.ID,"searchKeyword").send_keys(Keys.ENTER)
-time.sleep(3)
-
-count = 0
-while True:
-    items = driver.find_elements(By.CLASS_NAME, "standard-list-item")
-    for item in items:
-        print(item.get_attribute("href"))
-        count += 1
-    if count == 0:
-        print('Nera tokiu prekiu')
-    time.sleep(1)
-    pages = driver.find_elements(By.CLASS_NAME, "pagination_link")
-    next_page_found = False
-    for page in pages:
-        if page.text == "»":
-            page.click()
-            next_page_found = True
-            break
-    if not next_page_found:
-        print("Nera daugiau puslapiu")
-        break
-
-print(count)
-
-text = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text
-number = int(text[1:-1])
-if count == number:
-    print(f"All fine {number}/{count}")
-else:
-    print("Ah S***, Here We Go Again")
-# print(f'{driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div[2]/div[1]/ul/li/span").text}')
-time.sleep(3000)
-''
 
 # skelbiu.lt
 # pagal atitinkamus raktažodžius:
